@@ -20,7 +20,7 @@ QT_CHARTS_USE_NAMESPACE//加上这两行 就能用了QChart
 #include <QGridLayout>
 #include <QVBoxLayout>
 #include <QtCore/QTimer>
-
+#include <QMessageBox>
 #include <QLabel>
 namespace Ui {
 class MainWindow;
@@ -51,6 +51,7 @@ private:
 
     QGridLayout layout;
 
+    QMessageBox *msgBox;
 
     QChartView ChartView;
 
@@ -58,7 +59,7 @@ private:
     qreal m_x=0;
     qreal m_y=0;
 
-    QList<QPointF> pointfList;
+    //QList<QPointF> pointfList;
 
     //QPushButton bt;
 
