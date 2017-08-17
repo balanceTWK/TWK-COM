@@ -23,7 +23,7 @@ AboutDialog::AboutDialog(QWidget *parent) :
     m_infoEdit.setPalette(p);
     m_infoEdit.setFrameStyle(QFrame::NoFrame);
     m_infoEdit.setReadOnly(true);
-    m_infoEdit.insertPlainText("串口助手  Project\n\nPlatform: Qt 5.8.0\n\nVersion:  1.0.0\n\nAuthor:   TWK");
+    m_infoEdit.insertPlainText("串口助手  Project\n\nPlatform: Qt 5.8.0\n\nVersion:  1.0.3\n\nAuthor:   TWK");
 
     m_qqLbl.move(22, 184);
     m_qqLbl.setText("邮箱(Email): linuxtwk@outlook.com\n微信公众号:laiyiketang");
