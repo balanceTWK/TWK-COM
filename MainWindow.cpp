@@ -35,15 +35,6 @@ MainWindow::MainWindow(QWidget *parent) :
     initSelectItem();
     searchSerialPort();
 
-    ///---实例化消息对话框对象
-
-    msgBox = new QMessageBox("说明",       ///--这里是设置消息框标题
-        "如果需要使用波形图功能,下位机发送的字符串格式必须为:\n\n      #-_-#%f#^_^#\n\n%f表示你要发送的浮点数,#-_-#是这个数据的开头,#^_^#是这个数据的结尾.\n\n注意!是字符串!\n\n建议下位机300ms printf一次数据. ",                       ///--这里是设置消息框显示的内容
-        QMessageBox::Information,                          ///--这里是在消息框显示的图标
-        QMessageBox::Ok ,     ///---这里是显示消息框上的按钮情况
-        0,  ///---这里与 键盘上的 escape 键结合。当用户按下该键，消息框将执行cancel按钮事件
-        0);                                                     ///---这里是 定义第三个按钮， 该例子 只是 了显示2个按钮
-
     QObject::connect(ui->OpenSerialportButton,SIGNAL(clicked(bool)),this,SLOT (OpenSerialportButton()),Qt::UniqueConnection);
     QObject::connect(ui->ClearReceiveButton,SIGNAL(clicked(bool)),this,SLOT (clearAllTextEdit()),Qt::UniqueConnection);
     QObject::connect(ui->SearchButton,SIGNAL(clicked(bool)),this,SLOT (searchSerialPort()),Qt::UniqueConnection);
